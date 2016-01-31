@@ -1,3 +1,4 @@
+<?php
 // Register Custom Taxonomy
 function wrdsb_project_tags_custom_taxonomy() {
 
