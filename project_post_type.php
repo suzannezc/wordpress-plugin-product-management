@@ -59,7 +59,7 @@ add_action( 'init', 'wrdsb_project_post_type', 0 );
 function wrdsb_project_add_meta_box() {
 	add_meta_box(
 		'wrdsb_project_sectionid',
-		__( 'My Post Section Title', 'wrdsb_projects' ),
+		__( 'Project Information', 'wrdsb_projects' ),
 		'wrdsb_project_meta_box_callback',
 		'wrdsb_project',
 		'advanced',
@@ -89,7 +89,7 @@ function wrdsb_project_meta_box_callback( $post ) {
 	 */
 	$value = get_post_meta( $post->ID, '_my_meta_value_key', true );
 	echo '<label for="wrdsb_project_new_field">';
-	_e( 'Description for this field', 'wrdsb_projects' );
+	_e( 'Estimated Project Start Date', 'wrdsb_projects' );
 	echo '</label> ';
 	echo '<input type="text" id="wrdsb_project_new_field" name="wrdsb_project_new_field" value="' . esc_attr( $value ) . '" size="25" />';
 }
