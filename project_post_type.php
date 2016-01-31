@@ -34,7 +34,7 @@ function wrdsb_project_post_type() {
 		'description'           => __( 'A project', 'wrdsb_projects' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array( 'wrdsb_project_categories', 'wrdsb_project_tags' ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
