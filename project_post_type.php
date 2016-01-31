@@ -141,9 +141,16 @@ function wrdsb_project_save_meta_box_data( $post_id ) {
 	if ( ! isset( $_POST['wrdsb_project_start_date'] ) ) {
 		return;
 	}
+	if ( ! isset( $_POST['wrdsb_project_end_date'] ) ) {
+		return;
+	}
 	// Sanitize user input.
 	$my_data = sanitize_text_field( $_POST['wrdsb_project_start_date'] );
 	// Update the meta field in the database.
 	update_post_meta( $post_id, '_wrdsb_project_start_date', $my_data );
+	// Sanitize user input.
+	$my_data = sanitize_text_field( $_POST['wrdsb_project_end_date'] );
+	// Update the meta field in the database.
+	update_post_meta( $post_id, '_wrdsb_project_end_date', $my_data );
 }
 add_action( 'save_post', 'wrdsb_project_save_meta_box_data' );
