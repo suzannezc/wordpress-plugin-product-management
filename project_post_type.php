@@ -87,11 +87,17 @@ function wrdsb_project_meta_box_callback( $post ) {
 	 * Use get_post_meta() to retrieve an existing value
 	 * from the database and use the value for the form.
 	 */
-	$value = get_post_meta( $post->ID, '_my_meta_value_key', true );
-	echo '<label for="wrdsb_project_new_field">';
+	$start_date = get_post_meta( $post->ID, '_wrdsb_project_start_date', true );
+	echo '<label for="wrdsb_project_start_date">';
 	_e( 'Estimated Project Start Date', 'wrdsb_projects' );
 	echo '</label> ';
-	echo '<input type="text" id="wrdsb_project_new_field" name="wrdsb_project_new_field" value="' . esc_attr( $value ) . '" size="25" />';
+	echo '<input type="text" id="wrdsb_project_start_date" name="wrdsb_project_start_date" value="' . esc_attr( $value ) . '" size="25" />';
+
+	$end_date = get_post_meta( $post->ID, '_wrdsb_project_end_date', true );
+	echo '<label for="wrdsb_project_end_date">';
+	_e( 'Estimated Project End Date', 'wrdsb_projects' );
+	echo '</label> ';
+	echo '<input type="text" id="wrdsb_project_end_date" name="wrdsb_project_end_date" value="' . esc_attr( $value ) . '" size="25" />';
 }
 
 /**
@@ -129,12 +135,12 @@ function wrdsb_project_save_meta_box_data( $post_id ) {
 	/* OK, it's safe for us to save the data now. */
 	
 	// Make sure that it is set.
-	if ( ! isset( $_POST['wrdsb_project_new_field'] ) ) {
+	if ( ! isset( $_POST['wrdsb_project_start_date'] ) ) {
 		return;
 	}
 	// Sanitize user input.
-	$my_data = sanitize_text_field( $_POST['wrdsb_project_new_field'] );
+	$my_data = sanitize_text_field( $_POST['wrdsb_project_start_date'] );
 	// Update the meta field in the database.
-	update_post_meta( $post_id, '_my_meta_value_key', $my_data );
+	update_post_meta( $post_id, '_wrdsb_project_start_date', $my_data );
 }
 add_action( 'save_post', 'wrdsb_project_save_meta_box_data' );
