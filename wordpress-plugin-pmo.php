@@ -12,3 +12,4 @@
 */
 
 require_once dirname( __FILE__ ) . "/project_post_type.php";
+require_once dirname( __FILE__ ) . "/project_tags.php";
