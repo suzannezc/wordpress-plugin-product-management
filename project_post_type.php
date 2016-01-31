@@ -33,7 +33,7 @@ function wrdsb_project_post_type() {
 		'label'                 => __( 'Project', 'wrdsb_projects' ),
 		'description'           => __( 'A project', 'wrdsb_projects' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', ),
 		'taxonomies'            => array( 'wrdsb_project_categories', 'wrdsb_project_tags' ),
 		'hierarchical'          => true,
 		'public'                => true,
