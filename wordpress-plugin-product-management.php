@@ -14,3 +14,5 @@
 require_once dirname( __FILE__ ) . "/projects/project_post_type.php";
 require_once dirname( __FILE__ ) . "/projects/project_categories.php";
 require_once dirname( __FILE__ ) . "/projects/project_tags.php";
+
+require_once dirname( __FILE__ ) . "/plugins/plugin_tags.php";
