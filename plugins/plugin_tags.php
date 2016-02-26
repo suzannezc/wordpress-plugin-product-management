@@ -38,7 +38,7 @@ function wrdsb_plugin_tags_custom_taxonomy() {
 		'show_tagcloud'              => true,
 		'rewrite'                    => $rewrite,
 	);
-	register_taxonomy( 'wrdsb_plugin_tags', array( 'post', 'page' ), $args );
+	register_taxonomy( 'wrdsb_plugin_tags', array( 'post', 'page', 'wrdsb_plugin' ), $args );
 
 }
 add_action( 'init', 'wrdsb_plugin_tags_custom_taxonomy', 0 );
