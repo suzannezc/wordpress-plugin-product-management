@@ -10,9 +10,18 @@
 * GitHub Plugin URI: wrdsb/wordpress-plugin-product-management
 * GitHub Branch: master
 */
+require_once dirname( __FILE__ ) . "/cases/case_post_type.php";
+require_once dirname( __FILE__ ) . "/cases/case_categories.php";
+require_once dirname( __FILE__ ) . "/cases/case_tags.php";
+
+require_once dirname( __FILE__ ) . "/installs/install_post_type.php";
+require_once dirname( __FILE__ ) . "/installs/install_categories.php";
+require_once dirname( __FILE__ ) . "/installs/install_tags.php";
+
+require_once dirname( __FILE__ ) . "/plugins/plugin_post_type.php";
+require_once dirname( __FILE__ ) . "/plugins/plugin_categories.php";
+require_once dirname( __FILE__ ) . "/plugins/plugin_tags.php";
 
 require_once dirname( __FILE__ ) . "/projects/project_post_type.php";
 require_once dirname( __FILE__ ) . "/projects/project_categories.php";
 require_once dirname( __FILE__ ) . "/projects/project_tags.php";
-
-require_once dirname( __FILE__ ) . "/plugins/plugin_tags.php";
