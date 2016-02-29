@@ -87,20 +87,20 @@ function wrdsb_project_meta_box_callback( $post ) {
 	 * Use get_post_meta() to retrieve an existing value
 	 * from the database and use the value for the form.
 	 */
-	<div>
+	echo '<div>';
 	$start_date = get_post_meta( $post->ID, '_wrdsb_project_start_date', true );
 	echo '<label for="wrdsb_project_start_date">';
 	_e( 'Estimated Project Start Date', 'wrdsb_projects' );
 	echo '</label> ';
 	echo '<input type="text" id="wrdsb_project_start_date" name="wrdsb_project_start_date" value="' . esc_attr( $start_date ) . '" size="25" />';
-	</div>
-	<div>
+	echo '</div>';
+	echo '<div>';
 	$end_date = get_post_meta( $post->ID, '_wrdsb_project_end_date', true );
 	echo '<label for="wrdsb_project_end_date">';
 	_e( 'Estimated Project End Date', 'wrdsb_projects' );
 	echo '</label> ';
 	echo '<input type="text" id="wrdsb_project_end_date" name="wrdsb_project_end_date" value="' . esc_attr( $end_date ) . '" size="25" />';
-	</div>
+	echo '</div>';
 }
 
 /**
