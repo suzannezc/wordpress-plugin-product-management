@@ -33,7 +33,7 @@ function wrdsb_case_tags_custom_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'wrdsb_case_tags', array( 'post', 'page', 'wrdsb_case' ), $args );
+	register_taxonomy( 'wrdsb_case_tags', array( 'wrdsb_case' ), $args );
 
 }
 add_action( 'init', 'wrdsb_case_tags_custom_taxonomy', 0 );

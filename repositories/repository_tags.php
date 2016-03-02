@@ -33,7 +33,7 @@ function wrdsb_repository_tags_custom_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'wrdsb_repository_tags', array( 'post', 'page', 'wrdsb_repository' ), $args );
+	register_taxonomy( 'wrdsb_repository_tags', array( 'wrdsb_repository' ), $args );
 
 }
 add_action( 'init', 'wrdsb_repository_tags_custom_taxonomy', 0 );

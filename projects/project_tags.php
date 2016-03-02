@@ -33,7 +33,7 @@ function wrdsb_project_tags_custom_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'wrdsb_project_tags', array( 'post', 'page', 'wrdsb_project' ), $args );
+	register_taxonomy( 'wrdsb_project_tags', array( 'wrdsb_project' ), $args );
 
 }
 add_action( 'init', 'wrdsb_project_tags_custom_taxonomy', 0 );

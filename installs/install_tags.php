@@ -33,7 +33,7 @@ function wrdsb_install_tags_custom_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'wrdsb_install_tags', array( 'post', 'page', 'wrdsb_install' ), $args );
+	register_taxonomy( 'wrdsb_install_tags', array( 'wrdsb_install' ), $args );
 
 }
 add_action( 'init', 'wrdsb_install_tags_custom_taxonomy', 0 );
